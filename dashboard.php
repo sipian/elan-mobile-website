@@ -1,14 +1,4 @@
 <?php
-/*include '../Mobile-Detect-master/Mobile_Detect.php';
-$detect = new Mobile_Detect();
-
-if ($detect->isMobile()) {
-    header('Location: http://m.elan.org.in/dashboard.php');
-    exit(0);
-}*/
-?>
-
-<?php
 
 session_start();
 require 'connect.php';
@@ -86,7 +76,7 @@ if(!isset($_SESSION["id"])){
     background-size: cover;
     ">
 
-
+<?php include 'analyticstracking.php'; ?>
 <!-- banner -->
   <div class="banner-1 wthree-1">
     <div class="container">
@@ -168,11 +158,12 @@ if(!isset($_SESSION["id"])){
                 if($_SESSION["verified"] == 2)
                     echo('<h4>Email is not verified. Check your mail for verification email.</h4>');
                 else{
+                    $name = json_decode(file_get_contents('name.json') , true);
                         $answer = "<ul class='list-group'>";
                         if(isset($_SESSION["events"])){
                                 $array = explode(",",$_SESSION["events"]);
                              foreach ($array as $value) {
-                                $answer .= "<li class='list-group-item'><a href='events.php#$value'>$value</a></li>";
+                                $answer .= "<li class='list-group-item'><a href='events.php#$value'>$name[$value]</a></li>";
                                 } 
                                 $answer .= "</ul>";  
                         }
@@ -187,7 +178,7 @@ if(!isset($_SESSION["id"])){
                           
                           $answer = "<ul>";
                          foreach ($array as $value) {
-                                $answer .= "<li class='list-group-item'><a href='events.php#$value'>$value</a></li>";
+                                $answer .= "<li class='list-group-item'><a href='events.php#$value'>$name[$value]</a></li>";
                         }
                           $answer .= "</ul>";
                   }             
@@ -218,7 +209,6 @@ if(!isset($_SESSION["id"])){
             <ul>
               <li><a href="https://www.facebook.com/elan.iithyderabad/?fref=ts" target="_blank" class="facebook"> </a></li>
                 <li><a href="https://twitter.com/ELAN_IITH" target="_blank" class="facebook twitter"> </a></li>
-                <li><a href="https://www.youtube.com/user/ElanIITHyderabad" target="_blank" class="facebook chrome"> </a></li>
             </ul>   
             </div>
           

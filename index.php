@@ -47,17 +47,59 @@ session_start();
 </head>
 	
 <body>
+<?php include 'analyticstracking.php'; ?>
 <!-- banner -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-sm">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">UPDATES</h4>
+      </div>
+      <div class="modal-body">
+        <p  >
+        <ul style="list-style-type: none;">
+      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 1 IS Going To HAppen</li>
+      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 2 IS Going To HAppen</li>
+      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 3 IS Going To HAppen</li>
+      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 1 IS Going To HAppen</li>
+      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 2 IS Going To HAppen</li>
+      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 3 IS Going To HAppen</li>
+    </ul>
+      </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
   <div class="banner-1 wthree-1">
     <div class="container">
       <div class="banner_top">
         <div class="logo">
           <h1><a href="index.php"><img src="images/logo5.png"></a></h1>
         </div>
+        <div class="banner_top_left">
+        <a href="#">
+        <button style="background-color: green; position: relative; top:18px; "  data-toggle="modal" data-target="#myModal">
+          <h3 style="color: white;">UPDATES</h3>
+        </button>
+        
+        </a>
+        </div>
         <div class="banner_top_right">
           <nav class="navbar navbar-default">
         <!-- Brand and toggle get grouped for better mobile display -->
+
         <div class="navbar-header">
+
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -83,7 +125,7 @@ session_start();
             <li><a href="hospitality.php">Hospitality</a></li>
             <li><a href="workshops.php">Workshops</a></li>
             <li><a href="http://blog.elan.org.in/">Blog</a></li>
-            <li><a href="team.php">Contact US</a></li>
+            <li><a href="team.php">Team</a></li>
             <li><a href="literanza">Literanza</a></li>
             <?php 
           if(isset($_SESSION["id"]))

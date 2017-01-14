@@ -38,6 +38,8 @@ session_start();
 </head>
 	
 <body>
+<?php include 'analyticstracking.php'; ?>
+
 <!-- banner -->
 <!-- banner -->
   <div class="banner-1 wthree-1">
@@ -108,30 +110,30 @@ session_start();
 					<div class="col-md-3 main-serv-grid">
                         <a href="Workshop_details/andro_engine.html"><img src="images/Workshops/andro1.jpg" alt="" class="img-responsive"></a>
 						<h4>Android Engine <br>Workshop</h4>
-						<p>14th and 15th jan2017</p>
+						<p>14th and 15th Jan 2017</p>
 					</div>
 
 					<div class="col-md-3 main-serv-grid">
                         <a href="Workshop_details/quadcopter.html"><img src="images/Workshops/quadocop.jpg" alt="" class="img-responsive"></a>
 						<h4>Quadcopter <br> Workshop</h4>
-						<p>14th and 15th jan2017</p>
+						<p>14th and 15th Jan 2017</p>
 					</div>
 
 					<div class="col-md-3 main-serv-grid">
                         <a href="Workshop_details/androApp.html"><img src="images/Workshops/andro2.jpg" alt="" class="img-responsive"></a>
 						<h4>Android App Development <br>Workshop</h4>
-						<p>14th and 15th jan2017</p>
+						<p>14th and 15th Jan 2017</p>
 					</div>
 
 					<div class="col-md-3 main-serv-grid">
                         <a href="Workshop_details/autoMob.html"><img src="images/Workshops/car.jpg" alt="" class="img-responsive"></a>
 						<h4>Automobile Engine Mechanics <br>Workshop</h4>
-						<p>20th and 21st jan2017</p>
+						<p>20th and 21st Jan 2017</p>
 					</div>
 					<div class="col-md-3 main-serv-grid">
                         <a href="Workshop_details/robot.html"><img src="images/Workshops/hqdefault.jpg" alt="" class="img-responsive"></a>
 						<h4>Autonomous Robotics <br>Workshop</h4>
-						<p>20th and 21st jan2017</p>
+						<p>20th and 21st Jan 2017</p>
 					</div>
 
 <div class="col-md-3 main-serv-grid">
@@ -176,19 +178,19 @@ session_start();
 
 					
 					<div class="col-md-3 main-serv-grid">
-                        <a href="http://elan.org.in/aiworkshop/"><img src="images/Workshops/cloudcomputing.jpg" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="images/Workshops/cloudcomputing.jpg" alt="" class="img-responsive"></a>
 						<h4>Vitual Reality, Artificial Inteligence,<br>Cloud Computing Workshop</h4>
-						<p>22ND and 23RD October 2016</p>
+						<p>22nd and 23rd October 2016</p>
 					</div>
 
 					<div class="col-md-3 main-serv-grid">
-                        <a href="http://elan.org.in/ethicalhacking/"><img src="images/Workshops/hacking.jpg" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="images/Workshops/hacking.jpg" alt="" class="img-responsive"></a>
 						<h4>Ethical Hacking <br> Workshop</h4>
 						<p>17th and 18th September 2016</p>
 					</div>
 
 					<div class="col-md-3 main-serv-grid">
-                        <a href="http://elan.org.in/hapticsroboarm/"><img src="images/Workshops/roboticArm2.jpg" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="images/Workshops/roboticArm2.jpg" alt="" class="img-responsive"></a>
 						<h4>Haptics Roboarm <br>Workshop</h4>
 						<p>27th and 28th August 2016</p>
 					</div>
@@ -228,6 +230,7 @@ session_start();
 		</div>
 	</div>
 <!-- //footer -->
+
 <!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
 <!-- //for bootstrap working -->

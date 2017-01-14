@@ -9,12 +9,12 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 if(!isset($_SESSION["id"])){
-    header("Location: ../index.php?t=f");
+    header("Location: index.php?t=f");
     exit();
 }
 
 if(!isset($_SESSION["verified"])){
-    header("Location: ../index.php?t=r");
+    header("Location: index.php?t=r");
     exit();
 }
 $sql = "INSERT INTO $_POST[contest] VALUES ('$_POST[id]', '$_POST[elanId]' , '$_POST[email]' )";

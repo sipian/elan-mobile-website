@@ -32,6 +32,8 @@ else{
  </head>
  <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css">
  <body>
+ <?php include 'analyticstracking.php'; ?>
+
  <br><br><br>
  <div style="text-align: center;"> <h1>VIEW DETAILS</h1></div>
  <br><br><br>

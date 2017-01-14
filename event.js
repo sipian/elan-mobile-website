@@ -1,4 +1,20 @@
+    if(window.location.href.indexOf("cryptex")>-1){
+            window.location = "https://cryptex.nvision.org.in/";
+    }
+
+    if(window.location.href.indexOf("paper")>-1){
+            window.location = "https://nvision.org.in/paperpresentation";
+    }
+
+
+
 $(document).ready(function () {
+
+        $("#gotFanatic").click(function () {
+        alert("Game Of Thrones Fanatic Has ended.");
+    })
+
+
             $(".elanejungButton").click(function () {
             if(track==0){
                         alert('Please Sign In Before Registering');
@@ -648,7 +664,7 @@ $(document).ready(function () {
                     }
 
             if(events.indexOf('djwars')==-1){
-            $.post("../registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'djwars'}, function(result){
+            $.post("registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'djwars'}, function(result){
                 if(result!="failure"){
                                 alert('Successfully registered for DJ Wars');
                                 $('.djwarsButton').html('UNREGISTER');
@@ -659,7 +675,7 @@ $(document).ready(function () {
             });
         }
         else{
-            $.post("../unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'djwars'}, function(result){
+            $.post("unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'djwars'}, function(result){
                 if(result!="failure"){
                                 alert('Successfully Deregistered from DJ Wars');
                                 $('.djwarsButton').html('REGISTER');
@@ -757,7 +773,7 @@ $(document).ready(function () {
                 }
 
         if(events.indexOf('campus_princess')==-1){
-        $.post("../registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'campus_princess'}, function(result){
+        $.post("registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'campus_princess'}, function(result){
             if(result!="failure"){
                             alert('Successfully registered for Campus Princess');
                             $('.campus_princessButton').html('UNREGISTER');
@@ -768,7 +784,7 @@ $(document).ready(function () {
         });
     }
     else{
-        $.post("../unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'campus_princess'}, function(result){
+        $.post("unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'campus_princess'}, function(result){
             if(result!="failure"){
                             alert('Successfully Deregistered from Campus Princess');
                             $('.campus_princessButton').html('REGISTER');
@@ -795,7 +811,7 @@ $('body').on("click", ".mrdetectiveButton", function() {
                 }
 
         if(events.indexOf('mrdetective')==-1){
-        $.post("../registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'mrdetective'}, function(result){
+        $.post("registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'mrdetective'}, function(result){
             if(result!="failure"){
                             alert('Successfully registered for Mr Detective');
                             $('.mrdetectiveButton').html('UNREGISTER');
@@ -806,7 +822,7 @@ $('body').on("click", ".mrdetectiveButton", function() {
         });
     }
     else{
-        $.post("../unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'mrdetective'}, function(result){
+        $.post("unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'mrdetective'}, function(result){
             if(result!="failure"){
                             alert('Successfully Deregistered from Mr Detective');
                             $('.mrdetectiveButton').html('REGISTER');
@@ -830,7 +846,7 @@ $('body').on("click", ".wheel_of_fortuneButton", function() {
                 }
 
         if(events.indexOf('wheel_of_fortune')==-1){
-        $.post("../registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'wheel_of_fortune'}, function(result){
+        $.post("registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'wheel_of_fortune'}, function(result){
             if(result!="failure"){
                             alert('Successfully registered for Wheel Of Fortune');
                             $('.wheel_of_fortuneButton').html('UNREGISTER');
@@ -841,7 +857,7 @@ $('body').on("click", ".wheel_of_fortuneButton", function() {
         });
     }
     else{
-        $.post("../unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'wheel_of_fortune'}, function(result){
+        $.post("unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'wheel_of_fortune'}, function(result){
             if(result!="failure"){
                             alert('Successfully Deregistered from Wheel Of Fortune');
                             $('.wheel_of_fortuneButton').html('REGISTER');
@@ -865,7 +881,7 @@ $('body').on("click", ".quizzesButton", function() {
                 }
 
         if(events.indexOf('quizzes')==-1){
-        $.post("../registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'quizzes'}, function(result){
+        $.post("registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'quizzes'}, function(result){
             if(result!="failure"){
                             alert('Successfully registered for Quizzes');
                             $('.quizzesButton').html('UNREGISTER');
@@ -876,7 +892,7 @@ $('body').on("click", ".quizzesButton", function() {
         });
     }
     else{
-        $.post("../unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'quizzes'}, function(result){
+        $.post("unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'quizzes'}, function(result){
             if(result!="failure"){
                             alert('Successfully Deregistered from Quizzes');
                             $('.quizzesButton').html('REGISTER');
@@ -900,7 +916,7 @@ $('body').on("click", ".quizzesButton", function() {
                 }
 
         if(events.indexOf('jam')==-1){
-        $.post("../registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'jam'}, function(result){
+        $.post("registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'jam'}, function(result){
             if(result!="failure"){
                             alert('Successfully registered for Just A Minute');
                             $('.jamButton').html('UNREGISTER');
@@ -911,7 +927,7 @@ $('body').on("click", ".quizzesButton", function() {
         });
     }
     else{
-        $.post("../unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'jam'}, function(result){
+        $.post("unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'jam'}, function(result){
             if(result!="failure"){
                             alert('Successfully Deregistered from Just A Minute');
                             $('.jamButton').html('REGISTER');
@@ -922,6 +938,6 @@ $('body').on("click", ".quizzesButton", function() {
         });
     }
     });
-    
+
 
 })

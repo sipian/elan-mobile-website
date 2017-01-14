@@ -38,6 +38,7 @@ session_start();
 </head>
 	
 <body>
+<?php include 'analyticstracking.php'; ?>
 <!-- banner -->
   <div class="banner-1 wthree-1">
     <div class="container">
@@ -106,7 +107,6 @@ session_start();
 	</div>
 	<div class="history agileits-1">
 		<div class="container">
-		<h2 class="tittle">Details Comming Soon</h2>
 			<div class="col-md-6 history-left">	
 
           
@@ -147,6 +147,8 @@ Buses will be provided on the days of the festival. Specific bus details will be
 
 <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp; Mattress, bed sheets and pillows would be provided in accommodation. Please bring your own blankets if needed.
 <br>
+
+<span class="glyphicon glyphicon-star"></span>  Accommodation charges - INR 300/night. <br>
 
 <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;Safety deposit of INR 200 has to be paid at the registration desk. It would be reimbursed at the time of check out. 
 </div>
@@ -236,6 +238,34 @@ Buses will be provided on the days of the festival. Specific bus details will be
 <!-- about -->
 
 <!-- //footer -->
+      <div class="footer">
+    <div class="container">
+        
+      <div class="footer-info">
+      <div class="col-md-3 col-sm-3 footer-info-grid wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+          <h4>FOLLOW US</h4>
+          
+          <div class="social">
+            <ul>
+              <li><a href="https://www.facebook.com/elan.iithyderabad/?fref=ts" class="facebook"> </a></li>
+                <li><a href="https://twitter.com/ELAN_IITH" class="facebook twitter"> </a></li>
+                
+            </ul>   
+            </div>
+          
+        </div>
+        
+
+        
+      
+        <div class="clearfix"> </div>
+      </div>
+      
+    </div>
+    <div class="copyright wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+      <p>© 2017 ELAN . All Rights Reserved | Design by WebTeam</p>
+    </div>
+  </div>
 <!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
 <!-- //for bootstrap working -->

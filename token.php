@@ -19,16 +19,23 @@ if(!isset($_GET["token"])){
 
 print_r($_GET["token"]);
 print_r("<br><br><br><br>");
-print_r($_GET["signup"]);
+
 print_r("<br><br><br><br>");
+
+
 
 require_once('vendor/autoload.php');
 use \Firebase\JWT\JWT;
 
+JWT::$leeway = 900; // $leeway in seconds
+
 $key = "varyverysecrettokenithinkso";
 try{
     $decoded = JWT::decode($_GET["token"], $key, array('HS256'));
+    print_r($decoded);
+
 }
+
 catch(Exception $e){
      header("Location: error.php?err=Invalid Tokens. ");
      exit();
@@ -74,7 +81,7 @@ if (mysqli_num_rows($result) == 1){
 }
 else if(mysqli_num_rows($result) == 0){
         if($verifiedEmail == 1){
-                $sql = "insert into users values('$id' , '$userId' , '$name' , '$password' , '$college' , '$mobile' , '$email' , '');";
+                $sql = "insert into users values('$id' , '$userId' , '$name' , '$password' , '$college' , '$mobile' , '$email' , '','NO');";
                 if(mysqli_query($conn, $sql))
                         header("Location: dashboard.php");
                 else

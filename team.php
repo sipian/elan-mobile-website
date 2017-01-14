@@ -46,6 +46,8 @@ session_start();
 </head>
 	
 <body>
+<?php include 'analyticstracking.php'; ?>
+
 <!-- banner -->
   <div class="banner-1 wthree-1">
     <div class="container">
@@ -554,7 +556,7 @@ session_start();
 					<h4>Pankaj Kukreja</h4><br>
 					<p>Asst. Multimedia Coordinator<br>
 
-+91-90-5273-3010<br>
++91-74-1570-9916<br>
 
    pankaj@elan.org.in
 
@@ -650,7 +652,7 @@ session_start();
 			<div class="col-md-3 feature-grid text-center wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
 
 				<div class="feature-grid-two">
-					<img class="hi-icon hi-icon-archive glyphicon" src="images/team/srujan.png">
+					<img class="hi-icon hi-icon-archive glyphicon" src="images/team/srujan.jpg">
 
 					<h4>Bazar Srujan Kumar
 
@@ -792,7 +794,7 @@ session_start();
 					<h4>Karan Jindal</h4>
 					<p> Asst. Infrastructure Coordinator<br>
 
-+91-87-9049-8126<br>
++91-94-6349-2001<br>
 
    karan@elan.org.in</p>
 				</div>
@@ -824,7 +826,7 @@ session_start();
 					<h4>Surender Chauhan</h4>
 					<p>
 
-+91-95-8111-s5462<br>
++91-95-8111-5462<br>
 
    surender@elan.org.in
 
@@ -844,7 +846,34 @@ session_start();
    
         
     
-    
+                <div class="footer">
+        <div class="container">
+                
+            <div class="footer-info">
+            <div class="col-md-3 col-sm-3 footer-info-grid wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                    <h4>FOLLOW US</h4>
+                    
+                    <div class="social">
+                        <ul>
+                            <li><a href="https://www.facebook.com/elan.iithyderabad/?fref=ts" class="facebook"> </a></li>
+                                <li><a href="https://twitter.com/ELAN_IITH" class="facebook twitter"> </a></li>
+                                
+                        </ul>       
+                        </div>
+                    
+                </div>
+                
+
+                
+            
+                <div class="clearfix"> </div>
+            </div>
+            
+        </div>
+        <div class="copyright wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+            <p>© 2017 ELAN . All Rights Reserved | Design by WebTeam</p>
+        </div>
+    </div>
 
 <!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
