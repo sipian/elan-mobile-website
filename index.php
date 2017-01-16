@@ -48,43 +48,13 @@ session_start();
 	
 <body>
 <?php include 'analyticstracking.php'; ?>
-<!-- banner -->
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog  modal-sm">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">UPDATES</h4>
-      </div>
-      <div class="modal-body">
-        <p  >
-        <ul style="list-style-type: none;">
-      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 1 IS Going To HAppen</li>
-      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 2 IS Going To HAppen</li>
-      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 3 IS Going To HAppen</li>
-      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 1 IS Going To HAppen</li>
-      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 2 IS Going To HAppen</li>
-      <li><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;EVENT 3 IS Going To HAppen</li>
-    </ul>
-      </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
+<?php include 'updates.php'; ?>
 
   <div class="banner-1 wthree-1">
     <div class="container">
       <div class="banner_top">
         <div class="logo">
-          <h1><a href="index.php"><img src="images/logo5.png"></a></h1>
+          <h1><a href="index.php"><img src="images/logo5.png"><br><br></a></h1>
         </div>
         <div class="banner_top_left">
         <a href="#">
@@ -97,10 +67,8 @@ session_start();
         <div class="banner_top_right">
           <nav class="navbar navbar-default">
         <!-- Brand and toggle get grouped for better mobile display -->
-
         <div class="navbar-header">
-
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed" id="zig" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -111,25 +79,25 @@ session_start();
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav cl-effect-14">
-            <li><a href="index.php" class="active">Home</a></li>
-            <li><a href="events.php">Events</a></li>
-            <li><a href="sponsors.php">Sponsors</a></li>
+            <li><a href="index.php" class="active">Home<br><br></a></li>
+            <li><a href="events.php">Events<br><br></a></li>
+            <li><a href="sponsors.php">Sponsors<br><br></a></li>
           <li>
           <?php 
           if(isset($_SESSION["id"]))
-                echo "<a href=\"dashboard.php\">Dashboard</a>";
+                echo "<a href=\"dashboard.php\" >Dashboard<br><br></a>";
           else
-                echo "<a href=\"https://id.nvision.org.in/signin?url=http://mobile.elan.org.in/token.php\">Register</a>";
+                echo "<a href=\"https://id.nvision.org.in/signin?url=http://mobile.elan.org.in/token.php\">Register<br><br></a>";
            ?>
             </li>
-            <li><a href="hospitality.php">Hospitality</a></li>
-            <li><a href="workshops.php">Workshops</a></li>
-            <li><a href="http://blog.elan.org.in/">Blog</a></li>
-            <li><a href="team.php">Team</a></li>
-            <li><a href="literanza">Literanza</a></li>
+            <li><a href="hospitality.php">Hospitality<br><br></a></li>
+            <li><a href="workshops.php">Workshops<br><br></a></li>
+            <li><a href="proshows.php">Proshows<br><br></a></li>
+            <li><a href="team.php">Team<br><br></a></li>
+            <li><a href="http://blog.elan.org.in/">Blog<br><br></a></li>
             <?php 
           if(isset($_SESSION["id"]))
-                echo "<li><a href=\"signout.php\">Sign Out</a></li>";
+                echo "<li><a href=\"signout.php\">Sign Out<br><br></a></li>";
            ?>
           </ul>
         </div><!-- /.navbar-collapse -->  

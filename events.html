@@ -1,4 +1,4 @@
-<?php 
+<?html 
   session_start();
    ?>
     <!doctype html>
@@ -38,15 +38,15 @@
         <script src="js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="event.js"></script>
         <script type="text/javascript">
-            var track = <?php if(isset($_SESSION['id']))echo "1"; else echo "0"; ?>;
-            var _id = "<?php echo $_SESSION['id']; ?>";
-            var email = "<?php echo $_SESSION['email']; ?>";
-            var name = "<?php echo $_SESSION['name']; ?>";
-            var elanId = "<?php echo $_SESSION['elanId']; ?>";
-            var college = "<?php echo $_SESSION['college']; ?>";
-            var events = "<?php echo $_SESSION['events']; ?>".split(",");
+            var track = <?html if(isset($_SESSION['id']))echo "1"; else echo "0"; ?>;
+            var _id = "<?html echo $_SESSION['id']; ?>";
+            var email = "<?html echo $_SESSION['email']; ?>";
+            var name = "<?html echo $_SESSION['name']; ?>";
+            var elanId = "<?html echo $_SESSION['elanId']; ?>";
+            var college = "<?html echo $_SESSION['college']; ?>";
+            var events = "<?html echo $_SESSION['events']; ?>".split(",");
             var verified =
-                <?php 
+                <?html 
         if(isset($_SESSION['id']))
             echo $_SESSION['verified']; 
           else echo 3;
@@ -54,58 +54,69 @@
         </script>
     </head>
 
-    <body>
-        <?php include 'analyticstracking.php'; ?>
+<body>
+<?html include 'analyticstracking.html'; ?>
+<?html include 'updates.html'; ?>
+
             <!-- banner -->
-            <div class="banner-1 wthree-1">
-                <div class="container">
-                    <div class="banner_top">
-                        <div class="logo">
-                            <h1><a href="index.php"><img src="images/logo5.png"></a></h1>
-                        </div>
-                        <div class="banner_top_right">
-                            <nav class="navbar navbar-default">
-                                <!-- Brand and toggle get grouped for better mobile display -->
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                </div>
-                                <!-- Collect the nav links, forms, and other content for toggling -->
-                                <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-                                    <ul class="nav navbar-nav cl-effect-14">
-                                        <li><a href="index.php">Home</a></li>
-                                        <li><a href="events.php" class="active">Events</a></li>
-                                        <li><a href="sponsors.php">Sponsors</a></li>
-                                        <li>
-                                            <?php 
-                      if(isset($_SESSION["id"]))
-                            echo "<a href=\"dashboard.php\">Dashboard</a>";
-                      else
-                            echo "<a href=\"https://id.nvision.org.in/signin?url=http://mobile.elan.org.in/token.php\">Register</a>";
-                       ?>
-                                        </li>
-                                        <li><a href="hospitality.php">Hospitality</a></li>
-                                        <li><a href="workshops.php">Workshops</a></li>
-                                        <li><a href="http://blog.elan.org.in/">Blog</a></li>
-                                        <li><a href="team.php">Team</a></li>
-                                        <li><a href="literanza">Literanza</a></li>
-                                        <?php 
-                    if(isset($_SESSION["id"]))
-                          echo "<li><a href=\"signout.php\">Sign Out</a></li>";
-                     ?>
-                                    </ul>
-                                </div>
-                                <!-- /.navbar-collapse -->
-                            </nav>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-            </div>
+  <div class="banner-1 wthree-1">
+    <div class="container">
+      <div class="banner_top">
+        <div class="logo">
+          <h1><a href="index.html"><img src="images/logo5.png"><br><br></a></h1>
+        </div>
+                <div class="banner_top_left">
+        <a href="#">
+        <button style="background-color: green; position: relative; top:18px; "  data-toggle="modal" data-target="#myModal">
+          <h3 style="color: white;">UPDATES</h3>
+        </button>
+        
+        </a>
+        </div>
+        <div class="banner_top_right">
+          <nav class="navbar navbar-default">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" id="zig" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav cl-effect-14">
+            <li><a href="index.html">Home<br><br></a></li>
+            <li><a href="events.html" class="active">Events<br><br></a></li>
+            <li><a href="sponsors.html">Sponsors<br><br></a></li>
+          <li>
+          <?html 
+          if(isset($_SESSION["id"]))
+                echo "<a href=\"dashboard.html\">Dashboard<br><br></a>";
+          else
+                echo "<a href=\"https://id.nvision.org.in/signin?url=http://mobile.elan.org.in/token.html\">Register<br><br></a>";
+           ?>
+            </li>
+            <li><a href="hospitality.html">Hospitality<br><br></a></li>
+            <li><a href="workshops.html">Workshops<br><br></a></li>
+            <li><a href="proshows.html">Proshows<br><br></a></li>
+            <li><a href="team.html">Team<br><br></a></li>
+            <li><a href="http://blog.elan.org.in/">Blog<br><br></a></li>
+            <?html 
+          if(isset($_SESSION["id"]))
+                echo "<li><a href=\"signout.html\">Sign Out<br><br></a></li>";
+           ?>
+          </ul>
+        </div><!-- /.navbar-collapse -->  
+        
+      </nav>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
             <!-- //banner -->
             <!-- gallery -->
             <div class="gallery agile-1">
@@ -147,9 +158,7 @@
                   <br>
                   <br>
                   <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;Prizes worth Rs 45000 
-                  <br>
-                  <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;A chance to record their music in Soundkraft Recording Studio 
-                  (Hyderabad) 
+                  <br>                  (Hyderabad) 
                   <br>
                   <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;A chance to perform at any Hard Rock Cafe across india for one 
                   time 
@@ -216,7 +225,7 @@
                   Mob : 9515223051
                 </p>
               </div>
-              <a href="events.php#biggies_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#biggies_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -251,9 +260,6 @@
                   <strong>Prize :</strong>  
                   <br>
                   <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;Prizes worth Rs 35000 
-                  <br>
-                  <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;A chance to record their music video in Soundkraft Recording Studio 
-                  (Hyderabad) 
                   <br>
                   <strong>No. of Band members allowed :</strong> Maximum 7
                   <br><br>
@@ -313,7 +319,7 @@
                   Mob : 9515223051
                 </p>
               </div>
-              <a href="events.php#biggies_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#biggies_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -360,7 +366,7 @@
                   <a href="campus_princess.docx">Click Here To Know About The Rules For Campus Princess</a>
                 </p>
               </div>
-              <a href="events.php#biggies_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#biggies_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <h1 style="text-align: center;background-color: brown;font-size: 35px;padding-top: 2px;padding-bottom: 4px" id="culti_events">Culti</h1>
@@ -459,7 +465,7 @@
                   <a href="mailto:ee16btech11008@iith.ac.in">ee16btech11008@iith.ac.in</a><br>
                   +91-8790523845
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -543,7 +549,7 @@
                   <br>
                   +91-9515233213<br> 
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -625,7 +631,7 @@
                   <br>
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -685,7 +691,7 @@
                   <br>
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -760,7 +766,7 @@
                   +91-9603088406<br> 
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -813,7 +819,7 @@
                   +91-8978361825<br> 
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -869,7 +875,7 @@
                   +91-8978361825<br> 
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -922,7 +928,7 @@
                   +91-9052116313<br> 
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -977,7 +983,7 @@
                   +91-9052116313<br>
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -1038,7 +1044,7 @@
                   +91-9573950314<br>
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -1110,7 +1116,7 @@
                   <br> 
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -1173,7 +1179,7 @@
                   +91-7702921369<br> 
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
             </div>
           </li>
           <li class="grid">
@@ -1243,7 +1249,7 @@
                   <br> 
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>              
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>              
             </div>
           </li>
           <li class="grid">
@@ -1293,7 +1299,7 @@
                   +91-7660801623<br>
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>  
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>  
             </div>
           </li>
           <li class="grid">
@@ -1370,7 +1376,7 @@
                   +91-8142304650<br> 
                 </p>
               </div>
-              <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>  
+              <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>  
           </li>
           <li class="grid">
           <a href="#djwars">
@@ -1447,7 +1453,7 @@
           <br>
           </p>
           </div>
-          <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>  
+          <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>  
           </div>
           </li>
           <li class="grid">
@@ -1528,7 +1534,7 @@
           +91-9963079992<br> 
           </p>
           </div>
-          <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -1591,27 +1597,10 @@
           +91-9490329561<br> 
           </p>
           </div>
-          <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>  
+          <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>  
           </div>
           </li>
-          <!--          <li class="grid">
-            <a href="#image-24">
-              <figure class="effect-apollo">
-                <img src="images/infi/walktheramp.png" alt="image24">
-                <figcaption>
-                </figcaption>     
-              </figure>
-            </a>
-                        <h3>Walk The Ramp</h3>
-              <div class="lb-overlay" id="image-24">
-                  <img src="images/infi/walktheramp.png" alt="image4" />
-                  <div class="gal-info">              
-                    <h3>Walk The Ramp</h3>
-                    <p>Coming Soon....</p>
-                  </div>
-                  <a href="events.php" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
-              </div>
-            </li> -->
+
           <h1 style="text-align: center;background-color: brown;font-size: 35px;padding-top: 2px;padding-bottom: 4px" id="infi_events">Infi</h1>
 
                     <li class="grid">
@@ -1697,11 +1686,11 @@
 
           </p>
           </div>
-          <a href="events.php#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
                     <li class="grid">
-          <a href="#walktheramp">
+          <a href="#walk_the_ramp">
           <figure class="effect-apollo">
           <img src="images/infi/walktheramp.png" alt="image4">
           <figcaption>
@@ -1709,7 +1698,7 @@
           </figure>
           </a>
           <h3>Walk the Ramp</h3>
-          <div class="lb-overlay" id="walktheramp">
+          <div class="lb-overlay" id="walk_the_ramp">
           <img src="images/infi/walktheramp.png" alt="image4" />
           <div class="gal-info">              
           <h3>Walk the Ramp</h3>
@@ -1724,6 +1713,11 @@
           A ramp walk, followed by a Q&A session with the judges.
           Winners take home the titles of Mr and Ms Elan. 
           <br>
+           <button type="button" class="btn btn-primary btn-sm walk_the_rampButton" style="text-align:center;margin-left: 35%;">
+                    <script type="text/javascript">
+                      $(".walk_the_rampButton").html((events.indexOf('walk_the_ramp')>-1)?"UNREGISTER":"REGISTER");
+                    </script>
+                  </button>
           <br>
           <strong>DETAILS</strong>
           <br>
@@ -1742,7 +1736,7 @@
           <br>
           </p>
           </div>
-          <a href="events.php#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -1783,7 +1777,7 @@
           Organizer : Akhil Ashref (+91-9177285214) , Akshita Ramya (+91-9100084766)
           </p>
           </div>
-          <a href="events.php#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a> 
+          <a href="events.html#culti_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a> 
           </div>
           </li>
           <!--                     <li class="grid">
@@ -1801,7 +1795,7 @@
                     <h3>Field Kings</h3>
                     <p>Coming Soon</p>
                   </div>
-                  <a href="events.php" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+                  <a href="events.html" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
               </div>
             </li>
                      -->
@@ -1851,7 +1845,7 @@
           Organizer : Ayush Negi  (+91-8280032282) , Supreet Singh (+91-9652889870)
           </p>
           </div>
-          <a href="events.php#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -1901,7 +1895,7 @@
           Organizer : Aswin Kumar 
           </p>
           </div>
-          <a href="events.php#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -1931,7 +1925,7 @@
           Organizer: Vidhan Jain , Mayank Hooda (+91-965892682) <br>
           </p>
           </div>
-          <a href="events.php#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -1967,7 +1961,7 @@
           Organizer: Jeel Bhavsar (+91-9100283774)<br>
           </p>
           </div>
-          <a href="events.php#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -2003,7 +1997,7 @@
           Organizer: Deepak Nathani (+91-9177289949)<br>
           </p>
           </div>
-          <a href="events.php#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -2051,7 +2045,7 @@
           Organizer:Deepika Gonela (+91-9963079992) , Tejas Anand <br>
           </p>
           </div>
-          <a href="events.php#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -2090,7 +2084,7 @@
           <br><br>
           </p>
           </div>
-          <a href="events.php#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#infi_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           </li>
@@ -2161,7 +2155,7 @@
           At Fanzoo, the Fan always wins! See more at <a href="http://www.fanzoosports.com/">www.fanzoosports.com </a
           <br>
           </div>
-          <a href="events.php#online_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#online_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -2228,7 +2222,7 @@
           I further nominate ___ and ___ to take the challenge. #Emblazon_IITH"<br> .
           </p>
           </div>
-          <a href="events.php#online_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#online_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -2297,7 +2291,7 @@
           <br>
           <br>
           </div>
-          <a href="events.php#litr_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#litr_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -2345,7 +2339,7 @@
           </script>
           </button> 
           </div>
-          <a href="events.php#litr_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#litr_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -2415,7 +2409,7 @@
           </script>
           </button> 
           </div>
-          <a href="events.php#litr_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#litr_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <li class="grid">
@@ -2451,7 +2445,7 @@
           </script>
           </button> 
           </div>
-          <a href="events.php#litr_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
+          <a href="events.html#litr_events" class="lb-close"><img style="width: 50px; height: 50px ;top:-10%; " src="images/close.jpg" ></a>
           </div>
           </li>
           <!-- Techy -->
@@ -2761,7 +2755,18 @@
             
           </li>
 
-
+  
+      <li class="grid">
+            <a href="https://nvision.org.in/hackathon/">
+              <figure class="effect-apollo">
+                <img src="images/techy/hackathon.jpg" alt="image4">
+                <figcaption>
+                </figcaption>     
+              </figure>
+            </a>
+                        <h3>Reality Hack</h3>
+            
+          </li>
    
 
  <!-- Sci-Tech Quiz -->

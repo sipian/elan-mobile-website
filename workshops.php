@@ -39,20 +39,27 @@ session_start();
 	
 <body>
 <?php include 'analyticstracking.php'; ?>
+<?php include 'updates.php'; ?>
 
-<!-- banner -->
-<!-- banner -->
   <div class="banner-1 wthree-1">
     <div class="container">
       <div class="banner_top">
         <div class="logo">
-          <h1><a href="index.php"><img src="images/logo5.png"></a></h1>
+          <h1><a href="index.php"><img src="images/logo5.png"><br><br></a></h1>
+        </div>
+        <div class="banner_top_left">
+        <a href="#">
+        <button style="background-color: green; position: relative; top:18px; "  data-toggle="modal" data-target="#myModal">
+          <h3 style="color: white;">UPDATES</h3>
+        </button>
+        
+        </a>
         </div>
         <div class="banner_top_right">
           <nav class="navbar navbar-default">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed" id="zig" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -63,25 +70,25 @@ session_start();
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav cl-effect-14">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="events.php">Events</a></li>
-            <li><a href="sponsors.php">Sponsors</a></li>
+            <li><a href="index.php">Home<br><br></a></li>
+            <li><a href="events.php">Events<br><br></a></li>
+            <li><a href="sponsors.php">Sponsors<br><br></a></li>
           <li>
           <?php 
           if(isset($_SESSION["id"]))
-                echo "<a href=\"dashboard.php\">Dashboard</a>";
+                echo "<a href=\"dashboard.php\">Dashboard<br><br></a>";
           else
-                echo "<a href=\"https://id.nvision.org.in/signin?url=http://mobile.elan.org.in/token.php\">Register</a>";
+                echo "<a href=\"https://id.nvision.org.in/signin?url=http://mobile.elan.org.in/token.php\">Register<br><br></a>";
            ?>
             </li>
-            <li><a href="hospitality.php">Hospitality</a></li>
-            <li><a href="workshops.php" class="active">Workshops</a></li>
-            <li><a href="http://blog.elan.org.in/">Blog</a></li>
-            <li><a href="team.php">Team</a></li>
-            <li><a href="literanza">Literanza</a></li>
+            <li><a href="hospitality.php">Hospitality<br><br></a></li>
+            <li><a href="workshops.php" class="active">Workshops<br><br></a></li>
+            <li><a href="proshows.php">Proshows<br><br></a></li>
+            <li><a href="team.php">Team<br><br></a></li>
+            <li><a href="http://blog.elan.org.in/">Blog<br><br></a></li>
             <?php 
           if(isset($_SESSION["id"]))
-                echo "<li><a href=\"signout.php\">Sign Out</a></li>";
+                echo "<li><a href=\"signout.php\">Sign Out<br><br></a></li>";
            ?>
           </ul>
         </div><!-- /.navbar-collapse -->  
@@ -106,54 +113,18 @@ session_start();
 
 			<div class="services-bottom">
 				<div class="main-serv">
-
-					<div class="col-md-3 main-serv-grid">
-                        <a href="Workshop_details/andro_engine.html"><img src="images/Workshops/andro1.jpg" alt="" class="img-responsive"></a>
-						<h4>Android Engine <br>Workshop</h4>
-						<p>14th and 15th Jan 2017</p>
-					</div>
-
-					<div class="col-md-3 main-serv-grid">
-                        <a href="Workshop_details/quadcopter.html"><img src="images/Workshops/quadocop.jpg" alt="" class="img-responsive"></a>
-						<h4>Quadcopter <br> Workshop</h4>
-						<p>14th and 15th Jan 2017</p>
-					</div>
-
-					<div class="col-md-3 main-serv-grid">
-                        <a href="Workshop_details/androApp.html"><img src="images/Workshops/andro2.jpg" alt="" class="img-responsive"></a>
-						<h4>Android App Development <br>Workshop</h4>
-						<p>14th and 15th Jan 2017</p>
-					</div>
-
-					<div class="col-md-3 main-serv-grid">
-                        <a href="Workshop_details/autoMob.html"><img src="images/Workshops/car.jpg" alt="" class="img-responsive"></a>
+					<div class="col-md-6 main-serv-grid">
+                        <a href="Workshop_details/autoMob.html"><img src="images/Workshops/car.jpg" alt="" class="img-responsive img-thumbnail"></a>
 						<h4>Automobile Engine Mechanics <br>Workshop</h4>
 						<p>20th and 21st Jan 2017</p>
 					</div>
-					<div class="col-md-3 main-serv-grid">
-                        <a href="Workshop_details/robot.html"><img src="images/Workshops/hqdefault.jpg" alt="" class="img-responsive"></a>
+					<div class="col-md-6 main-serv-grid">
+                        <a href="Workshop_details/robot.html"><img src="images/Workshops/hqdefault.jpg" alt="" class="img-responsive img-thumbnail"></a>
 						<h4>Autonomous Robotics <br>Workshop</h4>
 						<p>20th and 21st Jan 2017</p>
-					</div>
-
-<div class="col-md-3 main-serv-grid">
-                       
-					</div>
-<div class="col-md-3 main-serv-grid">
-                        
-					</div>
-					<div class="col-md-3 main-serv-grid">
-                        
-					</div>
-
-
-					
-				 
-				</div>
-                
-                
-			</div>
-			<div class="clearfix"> </div>
+					</div>					
+				</div>  
+		</div>
 		</div>
 	</div>
 </div>
@@ -163,12 +134,11 @@ session_start();
 
 
 
-<div class="services agile-1">
+<div class="services agile-1" style="margin-top: -150px;">
 	<div class="container">
 		<div class="services-main">
 			<div class="services-top">
-			
-			<br>
+
 			<h2>Previous Workshops</h2>
 				
 			</div>
@@ -177,20 +147,38 @@ session_start();
 				<div class="main-serv">
 
 					
+                    <div class="col-md-3 main-serv-grid">
+                        <a href="Workshop_details/andro_engine.html"><img src="images/Workshops/andro1.jpg" alt="" class="img-responsive img-thumbnail"></a>
+                        <h4>Android Engine <br>Workshop</h4>
+                        <p>14th and 15th Jan 2017</p>
+                    </div>
+
+                    <div class="col-md-3 main-serv-grid">
+                        <a href="Workshop_details/quadcopter.html"><img src="images/Workshops/quadocop.jpg" alt="" class="img-responsive img-thumbnail"></a>
+                        <h4>Quadcopter <br> Workshop</h4>
+                        <p>14th and 15th Jan 2017</p>
+                    </div>
+
+                    <div class="col-md-3 main-serv-grid">
+                        <a href="Workshop_details/androApp.html"><img src="images/Workshops/andro2.jpg" alt="" class="img-responsive img-thumbnail"></a>
+                        <h4>Android App Development <br>Workshop</h4>
+                        <p>14th and 15th Jan 2017</p>
+                    </div>
+
 					<div class="col-md-3 main-serv-grid">
-                        <a href="#"><img src="images/Workshops/cloudcomputing.jpg" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="images/Workshops/cloudcomputing.jpg" alt="" class="img-responsive img-thumbnail"></a>
 						<h4>Vitual Reality, Artificial Inteligence,<br>Cloud Computing Workshop</h4>
 						<p>22nd and 23rd October 2016</p>
 					</div>
 
 					<div class="col-md-3 main-serv-grid">
-                        <a href="#"><img src="images/Workshops/hacking.jpg" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="images/Workshops/hacking.jpg" alt="" class="img-responsive img-thumbnail"></a>
 						<h4>Ethical Hacking <br> Workshop</h4>
 						<p>17th and 18th September 2016</p>
 					</div>
 
 					<div class="col-md-3 main-serv-grid">
-                        <a href="#"><img src="images/Workshops/roboticArm2.jpg" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="images/Workshops/roboticArm2.jpg" alt="" class="img-responsive img-thumbnail"></a>
 						<h4>Haptics Roboarm <br>Workshop</h4>
 						<p>27th and 28th August 2016</p>
 					</div>

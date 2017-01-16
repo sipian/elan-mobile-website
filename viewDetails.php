@@ -32,24 +32,26 @@ else{
  </head>
  <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css">
  <body>
- <?php include 'analyticstracking.php'; ?>
-
  <br><br><br>
  <div style="text-align: center;"> <h1>VIEW DETAILS</h1></div>
  <br><br><br>
  <div class="container">
      <div class="row">
-         <div class="col-lg-3">
+         <div class="col-lg-2">
             <button type="button" class="btn btn-default user">ALL USERS</button>
         </div>
-         <div class="col-lg-3">
+         <div class="col-lg-2">
             <button type="button" class="btn btn-primary biggie">BIGGIES</button>
         </div>
-         <div class="col-lg-3">
+         <div class="col-lg-2">
             <button type="button" class="btn btn-success culti">CULTI</button>
         </div>
-         <div class="col-lg-3">
+
+         <div class="col-lg-2">
             <button type="button" class="btn btn-warning litr">LITR</button>
+        </div>
+         <div class="col-lg-2">
+            <button type="button" class="btn btn-warning walk_the_ramp">WALK THE RAMP</button>
         </div>
      </div>
  </div>
@@ -69,6 +71,7 @@ else{
         <th>COLLEGE</th>
         <th>MOBILE NO.</th>
         <th>EMAIL</th>
+        <th>REGISTERED EVENTS</th>
       </tr>
     </thead>
     <tbody>
@@ -217,6 +220,13 @@ else{
         $('#name').html('ELAN-E-JUNG');
     });
 
+    $('body').on("click", ".walk_the_ramp", function() {
+        $.post("getDetails.php", { contest:'walk_the_ramp'}, function(result){
+                            $('tbody').html(result);
+        });
+        $('tbody').html("LOADING");
+        $('#name').html('WALK THE RAMP');
+    });
     $('body').on("click", ".manthan", function() {
         $.post("getDetails.php", { contest:'manthan'}, function(result){
                             $('tbody').html(result);

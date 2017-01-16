@@ -39,18 +39,28 @@ session_start();
 	
 <body>
 <?php include 'analyticstracking.php'; ?>
+<?php include 'updates.php'; ?>
+
 <!-- banner -->
   <div class="banner-1 wthree-1">
     <div class="container">
       <div class="banner_top">
         <div class="logo">
-          <h1><a href="index.php"><img src="images/logo5.png"></a></h1>
+          <h1><a href="index.php"><img src="images/logo5.png"><br><br></a></h1>
+        </div>
+                <div class="banner_top_left">
+        <a href="#">
+        <button style="background-color: green; position: relative; top:18px; "  data-toggle="modal" data-target="#myModal">
+          <h3 style="color: white;">UPDATES</h3>
+        </button>
+        
+        </a>
         </div>
         <div class="banner_top_right">
           <nav class="navbar navbar-default">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle collapsed" id="zig" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -61,25 +71,25 @@ session_start();
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav cl-effect-14">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="events.php">Events</a></li>
-            <li><a href="sponsors.php">Sponsors</a></li>
+            <li><a href="index.php">Home<br><br></a></li>
+            <li><a href="events.php">Events<br><br></a></li>
+            <li><a href="sponsors.php">Sponsors<br><br></a></li>
           <li>
           <?php 
           if(isset($_SESSION["id"]))
-                echo "<a href=\"dashboard.php\">Dashboard</a>";
+                echo "<a href=\"dashboard.php\" >Dashboard<br><br></a>";
           else
-                echo "<a href=\"https://id.nvision.org.in/signin?url=http://mobile.elan.org.in/token.php\">Register</a>";
+                echo "<a href=\"https://id.nvision.org.in/signin?url=http://mobile.elan.org.in/token.php\">Register<br><br></a>";
            ?>
             </li>
-            <li><a href="hospitality.php" class="active">Hospitality</a></li>
-            <li><a href="workshops.php">Workshops</a></li>
-            <li><a href="http://blog.elan.org.in/">Blog</a></li>
-            <li><a href="team.php">Team</a></li>
-            <li><a href="literanza">Literanza</a></li>
+            <li><a href="hospitality.php" class="active">Hospitality<br><br></a></li>
+            <li><a href="workshops.php">Workshops<br><br></a></li>
+            <li><a href="proshows.php">Proshows<br><br></a></li>
+            <li><a href="team.php">Team<br><br></a></li>
+            <li><a href="http://blog.elan.org.in/">Blog<br><br></a></li>
             <?php 
           if(isset($_SESSION["id"]))
-                echo "<li><a href=\"signout.php\">Sign Out</a></li>";
+                echo "<li><a href=\"signout.php\">Sign Out<br><br></a></li>";
            ?>
           </ul>
         </div><!-- /.navbar-collapse -->  
@@ -133,10 +143,15 @@ Buses will be provided on the days of the festival. Specific bus details will be
 <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;Accommodation would be provided only on first come first serve basis due to limited availability.
 <br>
 
-<span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;<a href="https://id.nvision.org.in/signin?url=/accommodation" target="_blank">Click here </a> to register for accommodation.
+
+<span class="glyphicon glyphicon-star"></span>&nbsp;
+<button class="btn btn-primary">
+<a href="https://id.nvision.org.in/signin?url=/accommodation" target="_blank" style="color: white">Click here</a> 
+</button> &nbsp;to register for accommodation.
+
 <br>
 
-<span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;You will get a confirmation mail from <a href="mailto:accommodation.iith@gmail.com">accommodation.iith@gmail.com</a> once your accommodation is confirmed. Kindly bring the e-copy/printout of the confirmation mail while coming to the fest. Accommodation will be provided solely on sharing basis.
+<span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;You will get a confirmation mail once your accommodation is confirmed. Kindly bring the e-copy/printout of the confirmation mail while coming to the fest. Accommodation will be provided solely on sharing basis.
 <br>
 
 <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;In case you don’t receive a confirmation mail regarding your accommodation due to unavailability, you can always make arrangements for your stay outside the IITH campus.

@@ -48,6 +48,41 @@ $(document).ready(function () {
     }     
         });
 
+                        $(".walk_the_rampButton").click(function () {
+            if(track==0){
+                        alert('Please Sign In Before Registering');
+                        return;
+                }
+            if(verified==2){
+                        alert('Please Verify Your Mail Id First');
+                        return;
+                }
+                if(events.indexOf('walk_the_ramp')==-1){
+                $.post("registerEvent.php", {id: _id , email: email , elanId:elanId, contest:'walk_the_ramp'}, function(result){
+            if(result!="failure"){
+                            alert('Successfully registered for Walk The Ramp');
+                            $('.walk_the_rampButton').html('UNREGISTER');
+                            events=result;
+                        }
+            else
+                alert('Some Error Ocurred While Registering');
+        });
+            }
+       else{
+        $.post("unregisterEvent.php", {id: _id , email: email , elanId:elanId, contest:'walk_the_ramp'}, function(result){
+            if(result!="failure"){
+                            alert('Successfully Deregistered from Walk The Ramp');
+                            $('.walk_the_rampButton').html('REGISTER');
+                            events=result;
+                        }
+            else
+                alert('Some Error Ocurred While Deregistering');
+        });
+    }     
+        });
+
+            
+
 
                     $(".manthanButton").click(function () {
             if(track==0){

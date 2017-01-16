@@ -25,7 +25,7 @@ else  $count=1;
 if (mysqli_num_rows($result) > 0){    
     while($row = mysqli_fetch_assoc($result)){
 $answer.= 
-"<tr class='warning'><td>$count</td><td>$row[elanId]</td><td>$row[name]</td><td>$row[college]</td><td>$row[mobile]</td><td>$row[email]</td></tr>";
+"<tr class='warning'><td>$count</td><td>$row[elanId]</td><td>$row[name]</td><td>$row[college]</td><td>$row[mobile]</td><td>$row[email]</td><td>$row[registered_events]</td></tr>";
     $count++;
     }
 }
